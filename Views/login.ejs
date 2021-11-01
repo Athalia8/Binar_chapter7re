@@ -16,15 +16,15 @@
     <div id="position" class="container d-flex flex-column text-center position-absolute top-50 start-50 translate-middle">
       <div class="row justify-content-center">
         <div class="col bg">
-          <form>
+          <form action="/login" method="post">
             <p class="h3 mb-5">Log in with LOGO acount</p>
             <div class="mb-3">
               <label for="username" class="form-label text-co">Username</label>
-              <input type="text" class="form-control text-center" id="username" aria-describedby="username"  placeholder="Enter username">
+              <input type="text" class="form-control text-center" id="username" aria-describedby="username" name="username" placeholder="Enter username">
             </div>
             <div class="mb-3">
               <label for="password" class="form-label text-co">Password</label>
-              <input type="password" class="form-control text-center" id="inputpas" name="inputpass"  placeholder="Enter password">
+              <input type="password" class="form-control text-center" id="inputpas" name="password"  placeholder="Enter password">
             </div>
             <button type="submit" class="btn btn-warning fw-bold text-uppercase" id="submit">Submit</button>
             <br>

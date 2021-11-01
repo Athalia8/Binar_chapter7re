@@ -29,7 +29,3 @@
     padding: 15px 40px;
 }
 
-#buto a:hover {
-    color: var(--orange-dark);
-    text-decoration: underline !important;
-}
