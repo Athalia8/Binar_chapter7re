@@ -1,0 +1,67 @@
+#player_batu
+#player_gunting
+#player_kertas
+#com_batu
+#com_gunting
+#com_kertas
+#hasil-P
+#hasil-C 
+
+/* // resultName.className = "teks-hasil"; */
+.hasil {
+    transform: rotate(-30deg);
+    border-radius: 10px;
+    background-color: #4C9654;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -400rem;
+    left: 20vw;
+}
+
+.teks-hasil {
+    height: 174px;
+    width: 174px;
+    background-color: #4C9654;
+    
+}
+
+.klik:hover {
+    background: #C4C4C4;
+    border-radius: 15px;
+}
+
+.btn:enabled{
+    animation: wave 1s;
+  }
+
+.judul {
+    color: #F9B23D;
+    font-family: 'Open Sans', sans-serif;;
+    font-size:36px ;
+    font-weight: bold;
+    text-align: center;
+}
+
+.title_text {
+    color: black;
+    font-family: 'Open Sans', sans-serif;;
+    font-size:36px ;
+    font-weight: bolder;
+}
+
+.VS_position {
+    font-family: 'Open Sans', sans-serif;;
+    font-weight: bold;
+    text-align: center;
+    font-size:40px ;
+}
+.hasil-X{
+    font-family: 'Open Sans', sans-serif;;
+    font-weight: bold;
+    text-align: center;
+    font-size:40px ;
+    color: black;
+}

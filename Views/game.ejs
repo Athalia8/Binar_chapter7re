@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Permainan Gunting Kertas Batu</title>
+    <!-- booststrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- penataan -->
+    <link rel="stylesheet" href="css/setting-game.css">
+</head>
+
+<body style="background-color: #9C835F">
+    <!-- title-->
+    <nav class="nav">
+        <a class="nav-link active" aria-current="page" href="/"><i class="fas fa-chevron-left" style="font-size: 60px;"></i></a>
+        <div class="judul ms-3"><img src="../asset/logo.png">Rock Papper Scissors</div>
+    </nav>
+
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-4 col-md-2" style="height: 500px;">
+
+                <div class="row d-flex flex-column align-items-center justify-content-evenly" style="height:100%">
+                    <div>
+                        <%= name %>
+                    </div>
+
+                    <div>
+                        <button class="btn klik" id="player_batu">
+                            <img loading="lazy" src="../asset/batu.png" width="100" height="100" alt="batu" onclick="chooseBatu()">
+                        </button>
+                    </div>
+
+                    <div>
+                        <button class="btn klik" id="player_gunting">
+                            <img loading="lazy" src="../asset/gunting.png" width="100" height="100" alt="gunting" onclick="chooseGunting()">
+                        </button>
+                    </div>
+
+                    <div>
+                        <button class="btn klik" id="player_kertas">
+                            <img loading="lazy" src="../asset/kertas.png" width="100" height="100" alt="kertas" onclick="chooseKertas()">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 col-md-2" style="height: 500px;">
+                <div class="row d-flex flex-column align-items-center justify-content-evenly" style="height:100%">
+                    <br>
+                    <div id="hasil-C">
+                    <p class="hasil-X" id="hasil-P">VS</p>
+                </div>
+                    <div class="reset">
+                        <button id="ulang" class=" btn rounded mx-auto d-block klik" onclick="reset()">
+                            <img loading="lazy" src="../asset/refresh.png" width="50" height="50">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 col-md-3" style="height: 500px;">
+
+                <div class="row d-flex  flex-column align-items-center justify-content-evenly " style="height:100%">
+                    <div>
+                        <h2 class="title_text">COM</h2>
+                    </div>
+
+                    <div>
+                        <button class="btn" id="com_batu">
+                            <img loading="lazy" src="../asset/batu.png" width="100" height="100" alt="batu">
+                        </button>
+                    </div>
+
+                    <div>
+                        <button class="btn" id="com_gunting">
+                            <img loading="lazy" src="../asset/gunting.png" width="100" height="100" alt="gunting">
+                        </button>
+                    </div>
+
+                    <div>
+                        <button class="btn" id="com_kertas">
+                            <img loading="lazy" src="../asset/kertas.png" width="100" height="100" alt="kertas">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../js/game.js">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/js/bootstrap.min.js">
+        </script>
+
+</body>
+
+</html>

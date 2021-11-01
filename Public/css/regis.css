@@ -1,0 +1,35 @@
+.bg{
+    max-width: 500px;
+    background-color: #08124A;
+    border: 1px solid lightskyblue;
+    border-radius: 20px;
+    padding: 40px 40px;
+}
+
+.text-co {
+    color: #A6D5F2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.h3 {
+    color: #A6D5F2;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.form-control {
+    border-radius: 20px;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 10px #E76A4B, 0 0 40px #E76A4B , 0 0 80px #E76A4B;
+}
+
+#buto {
+    border-radius: 30px;
+    padding: 15px 40px;
+}
+
+#buto a:hover {
+    color: var(--orange-dark);
+    text-decoration: underline !important;
+}

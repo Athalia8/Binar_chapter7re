@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <%- include('partials/head') %>
+  <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+  <%- include('partials/navbar') %>
+  <div class="container-fluid" id="req">
+    <div id="position" class="container d-flex flex-column text-center position-absolute top-50 start-50 translate-middle">
+      <div class="row justify-content-center">
+        <div class="col bg">
+          <form>
+            <p class="h3 mb-5">Log in with LOGO acount</p>
+            <div class="mb-3">
+              <label for="username" class="form-label text-co">Username</label>
+              <input type="text" class="form-control text-center" id="username" aria-describedby="username"  placeholder="Enter username">
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label text-co">Password</label>
+              <input type="password" class="form-control text-center" id="inputpas" name="inputpass"  placeholder="Enter password">
+            </div>
+            <button type="submit" class="btn btn-warning fw-bold text-uppercase" id="submit">Submit</button>
+            <br>
+            <a class="text-blue small text-decoration-none" href="/register">Don't have account yet? let's make it</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%- include('partials/scrip') %>
+</body>
+
+</html>

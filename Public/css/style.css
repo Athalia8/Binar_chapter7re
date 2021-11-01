@@ -1,0 +1,419 @@
+#main {
+    background-image: url('../asset/main-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+}
+
+#game {
+    background-image: url('../asset/the-games-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+#feature {
+    background-image: url('../asset/features.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+#req {
+    background-image: url('../asset/requirements.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+#score {
+    background-image: url('../asset/top-score-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.awal {
+
+    position: relative;
+    top: 100px;
+
+    font-family: Arial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 83px;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+}
+
+.awal-2 {
+    position: relative;
+    top: 150px;
+
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: white;
+}
+
+
+.bagian1 {
+    position: relative;
+    top: 200px;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+
+}
+
+.bagian2 {
+    position: relative;
+    top: 200px;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 56px;
+    line-height: 64px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.bagian3 {
+
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+}
+
+.bagian4 {
+
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 56px;
+    line-height: 64px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.bagian5 {
+    position: relative;
+    top: 50px;
+    padding-left: 80vh;
+
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+}
+
+.bagian6 {
+    position: relative;
+    top: 10vh;
+    padding-left: 10vh;
+
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 64px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.bagian7 {
+    position: relative;
+    top: 250px;
+    left: 50px;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 56px;
+    line-height: 64px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.bagian8 {
+    position: relative;
+    top: 250px;
+    left: 50px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.tama {
+    position: relative;
+    top: 100px;
+    right: -800px;
+
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 2px;
+    color: #FFB548;
+}
+
+.utama {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #FFB548;
+
+}
+
+.second {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+
+}
+
+.bar {
+    position: absolute
+}
+
+.bat {
+    position: relative;
+    top: 100px;
+
+}
+
+.tabel3 {
+    position: relative;
+    top: 10vh;
+    left: 10vh;
+    color: white;
+
+    width: 80vh;
+
+}
+
+.buto2 {
+    position: relative;
+    top: 300px;
+    left: 50px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+
+    text-align: center;
+    text-transform: lowercase
+}
+
+.buto1 {
+    position: relative;
+    top: 30vh;
+    left: 80vh;
+
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 16px;
+    line-height: 22px;
+
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+}
+
+.hal-2 {
+    position: relative;
+    top: 100px;
+}
+
+.caro {
+    position: relative;
+    top: 250px;
+    right: 150px;
+}
+
+.button {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-right: 10vh;
+    padding-left: 10vh;
+}
+
+.page-2 {
+    color: white;
+}
+
+.navio {
+    margin-right: 10vh;
+    margin-left: 10vh;
+}
+
+.navio2 {
+    margin-left: 60vh;
+}
+
+.navio3 {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+a,
+a:link,
+a:visited {
+    color: white !important;
+}
+
+.baratas {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.logo {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.F2 {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 2px;
+    color: #FFB548;
+}
+
+ul.custom:before {
+    content: ' ';
+    background: #d4d9df;
+    display: inline-block;
+    position: absolute;
+    left: 23px;
+    width: 2px;
+    height: 34%;
+    z-index: 400;
+    top: 125px
+}
+
+ul.custom>li.tom:before {
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid white;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+
+.card-1 {
+    position: relative;
+    top: 20px;
+
+}
+
+.card-img {
+    height: 63px;
+    width: 67px;
+}
+
+.pos {
+    position: relative;
+    top: 12px;
+    left: 12px;
+}
+
+.text1 {
+    position: relative;
+    top: 0px;
+    right: 75px;
+    ;
+}
+
+.text2 {
+    position: relative;
+    top: 5px;
+    right: 82px;
+}
+
+.text3 {
+    position: relative;
+    top: 5px;
+    right: 82px;
+}
+
+.isi {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: white;
+}
+
+.card-e {
+    position: relative;
+    top: 60px;
+    right: 50px;
+}
+
+.card-j {
+    position: relative;
+    top: 60px;
+    right: -250px;
+}
+
+.card-a {
+    position: relative;
+    top: -50px;
+    right: 80px;
+}
