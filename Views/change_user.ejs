@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDIT USER</title>
+</head>
+<body>
+    <h1>User List</h1>
+    <% users.forEach(i => {%>
+        <div>
+            <p><%= i.userId %> | <%= i.name %> | <%= i.email %></p>
+        </div>    
+    <% }) %>
+        
+    <h1>USER ID TO EDIT</h1>
+    <form action="/change_user" method="POST">
+        <label for="userid">UserID</label>
+        <br>
+        <input type="number" name="userid" placeholder="userid">
+        <br>
+
+        <label for="username">Username</label>
+        <br>
+        <input type="text" name="username" placeholder="username">
+        <br>
+
+        <label for="name">Name</label>
+        <br>
+        <input type="text" name="name" placeholder="name">
+        <br>
+
+        <label for="email">E-mail</label>
+        <br>
+        <input type="email" name="email" placeholder="email">
+        <br>
+        
+        <label for="password">Password</label>
+        <br>
+        <input type="password" name="password" placeholder="Password" required>
+        <br>
+
+        <button type="submit">EDIT USER</button>
+    </form>
+
+    <button type="submit"><a href="/super_admindash">Back to dashboard</a></button>
+</body>
+</html>
