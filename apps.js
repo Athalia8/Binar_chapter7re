@@ -35,6 +35,10 @@ app.get('/register', (req, res) => {
     res.render('register');
 })
 
+app.get("/Partials/user", (req,res) => {
+  res.render("partials/user");
+});
+app.get()
 //read data
 app.get('/api/v1/user', (req, res) => {
     res.status(200).json(users)
@@ -74,83 +78,86 @@ app.post('/register', (req,res) => {
     res.redirect('/login')
 })
 
-// CREATE
-app.get('/users/create', (req, res) => {
-    res.render('user_create');
-  });
-  app.post('/users/create', (req, res) => {
-    const { email, username, password, name } = req.body;
-  
-    Usergame.create({ email, username, password }).then((newUser) => {
-      usergamebiodata.create({
-        name,
-        user_id: newUser.id,
-      });
-      res.status(201).catch((error) => {
-        res.status(422).json("Can't create user", error);
-      });
-    });
-  });
-  
-  // READ
-  app.get('/users', (req, res) => {
-    Usergame.findAll({
-      include: usergamebiodata,
-    })
-      .then((data) => {
-        res.render('user', { data });
-      })
-      .catch((error) => {
-        console.log('oopps! something wrong', error);
-      });
-  });
-  
-  // UPDATE
-  app.get('/users/update/:id', (req, res) => {
-    Usergame.findOne({
-      where: { id: req.params.id },
-      include: usergamebiodata,
-    }).then((user) => {
-      res.render('user_update', { user });
-    });
-  });
-  app.post('/users/update/:id', (req, res) => {
-    const { email, username, password, name } = req.body;
-  
-    Usergame.update(
-      { email, username, password },
-      { where: { id: req.params.id }, returning: true }
-    )
-      .then((user) => {
-        Usergame.findOne({
-          where: { id: req.params.id },
-          include: usergamebiodata,
-        }).then((user1) => {
-          usergamebiodata.update(
-            {
-              name,
-            },
-            { where: { id: user1.usergamebiodatum.id } }
-          );
-          res.status(201);
-        });
-      })
-      .catch((error) => {
-        res.status(400).json("Can't update user", error);
-      });
-  });
-  
-  // DELETE
-  app.get('/users/delete/:id', (req, res) => {
-    Usergame.destroy({ where: { id: req.params.id }, returning: true }).then(
-      (_) => {
-        res.redirect('/user');
-      }
-    );
-  });
+//get all data
 
+app.get("/user", (req, res)=> {
+  Usergame.findAll({include: Userbiodata}).then((a)=> res.render ("app", {a}))
+  .catch((error) => res.status(404).json ("something when wrong, check again"));
+});
+
+//post
+app.post("/newuser", (req, res) => {
+  Usergame.create({
+      email: req.body.email,
+      username: req.body.username,
+      password: req.body.password,
+      approved: req.body.approved,
+  })
+  .then((a) => res.status(200).json("user berhasil dibuat"))
+  .catch((err) => res.status(400).json("Tidak berhasil membuat akun"));
+});
+
+app.post("/bio", (req, res) => {
+  Usergame.create({
+    nama: req.body.email,
+    user_id: req.body.user_id,
+  })
+  .then((a) => res.status(200).json("user berhasil dibuat"))
+  .catch((err) => res.status(400).json("Tidak berhasil membuat akun"));
+});
+
+app.post("/gamehistory", (req, res) => {
+  Usergame.create({
+      score: req.body.score,
+  })
+  .then((a) => res.status(200).json("status berhasil dibuat"))
+  .catch((err) => res.status(400).json("status gagal"));
+});
+//put
+app.put("/user/:id", (req, res) => {
+  Usergame.update({
+    email: req.body.email,
+    username: req.body.username,
+    password: req.body.password,
+    approved: req.body.approved,
+  },
+  {
+      where:{ id: req.params.id},
+  })
+  .then((a) => res.status(201).json("berhasil update"))
+  .catch((err) => res.status(400).json("can't update"));
+});
+
+app.put("/bio", (req, res) => {
+  Usergame.update({
+    nama: req.body.email,
+    user_id: req.body.user_id,
+  },
+  {
+    where:{ id: req.params.id},
+  })
+  .then((a) => res.status(200).json("bio berhasil di update"))
+  .catch((err) => res.status(400).json("bio can't update"));
+});
+
+app.put("/gamehistory", (req, res) => {
+  Usergame.update({
+      score: req.body.score,
+  },
+  {
+    where:{ id: req.params.id},
+  })
+  .then((a) => res.status(200).json("status berhasil diupdate"))
+  .catch((err) => res.status(400).json("status gagal diupdate"));
+
+//Delete
+app.get('/users/delete/:id', (req, res) => {
+  UserGame.destroy({ where: { id: req.params.id }, returning: true }).then(
+    (_) => {
+      res.redirect('/users');
+    });
+});
 
 app.listen(PORT, () => {
     console.log(`Go to http://localhost:${PORT}`)
 })
-
