@@ -11,11 +11,13 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      this.belongsTo(models.User, {foreginKey: "UserId"});
     }
   }
   Userbiodata.init({
     name: DataTypes.STRING,
     user_id: DataTypes.INTEGER,
+    gender: DataTypes.STRING,
     approved: DataTypes.BOOLEAN
   }, {
     sequelize,

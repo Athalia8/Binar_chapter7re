@@ -14,6 +14,9 @@ module.exports = {
       user_id: {
         type: Sequelize.INTEGER
       },
+      gender: {
+        type: Sequelize.STRING
+      },
       approved: {
         type: Sequelize.BOOLEAN
       },

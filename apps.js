@@ -3,7 +3,7 @@ const morgan = require('morgan');
 const app = express();
 const PORT = 3800;
 const fs = require('fs');
-const { Usergame, usergamebiodata } = require('./models');
+const methodOverride = require ("method-override");
 const users = require('./data/user.json');
 
 app.use(express.static('Public'));
@@ -17,6 +17,16 @@ app.use(express.urlencoded({
     extended: false
 }))
 
+app.use(
+  methodOverride(function (req, res) {
+    if (req.body && typeof req.body === "object" && "_method" in req.body) {
+      var method = req.body._method;
+      return method;
+    }
+  })
+);
+
+app.use(router);
 
 //router
 app.get('/', (req, res) => {

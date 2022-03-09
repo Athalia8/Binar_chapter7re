@@ -8,7 +8,16 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      hasil: {
+      UserId: {
+        type: Sequelize.INTEGER
+      },
+      level: {
+        type: Sequelize.STRING
+      },
+      hasil_kalah: {
+        type: Sequelize.STRING
+      },
+      hasil_menang : {
         type: Sequelize.STRING
       },
       createdAt: {

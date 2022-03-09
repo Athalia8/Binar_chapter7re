@@ -11,10 +11,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      this.belongsTo(models.User, {foreignKey: "UserId"});
     }
   };
   Usergame.init({
-    email: DataTypes.STRING,
     username: DataTypes.STRING,
     password: DataTypes.STRING,
     approved: DataTypes.BOOLEAN

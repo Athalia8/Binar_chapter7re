@@ -14,7 +14,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Userhistory.init({
-    hasil: DataTypes.STRING
+    UserId: DataTypes.INTERGER,
+    level: DataTypes.INTERGER,
+    hasil_kalah: DataTypes.STRING,
+    hasil_menang: DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'Userhistory',
